@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/css/stylesnotes.css">
+<div class="row gy-4">
+    {{#each notes}}
+    <div class="col-md-4">
+        <div class="card card_all">
+            <div class="card-header mt-1 mb-0 overflow-auto">
+                <h4 class="card-title d-flex justify-content-between align-items-center">
+                    <i class="fas fa-book-open tag_icon input-group-text"></i>{{title}}<a href="/notes/edit/{{_id}}"><i
+                            class="fas fa-edit edit_icon"></i></a>
+                </h4>
+            </div>
+            <div class="card-body overflow-auto">
+                <p class="descriptions">{{description}}</p>
+            </div>
+            <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST" class="buttondelete">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-warning w-100 btn-sm">Delete</button>
+            </form>
+        </div>
+    </div>
+{{/each}}
+</div>

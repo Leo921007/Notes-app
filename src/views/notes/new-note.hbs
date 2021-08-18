@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="/css/stylesnotes.css">
+<!--div class="col-md-4 mx-auto"-->
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card card_new">
+            <div class="card-header mt-3 mb-0 card_header_css">
+                <h5 class="card-title mt-auto mb-auto">
+                    <i class="fas fa-file new_icon input-group-text"></i>
+                    New Note
+                </h5>
+            </div>
+            <form action="/notes/new-note" method="POST">
+                <div class="card-body">
+                    <div class="mb-2">
+                        <input type="text" name="title" class="form-control" placeholder="Title" autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="description" placeholder="Description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-warning w-100">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
